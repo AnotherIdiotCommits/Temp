@@ -1,0 +1,22 @@
+{
+  "name": "StockReminder",
+  "type": "object",
+  "properties": {
+    "pc_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "notified": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "pc_name"
+  ]
+}

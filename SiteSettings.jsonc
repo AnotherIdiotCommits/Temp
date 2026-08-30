@@ -1,0 +1,80 @@
+{
+  "name": "SiteSettings",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Setting key identifier"
+    },
+    "vacation_mode": {
+      "type": "boolean",
+      "default": false
+    },
+    "vacation_message": {
+      "type": "string"
+    },
+    "vacation_return_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "weekly_drop_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "weekly_drop_sold_out": {
+      "type": "boolean",
+      "default": false
+    },
+    "weekly_drop_on_sale": {
+      "type": "boolean",
+      "default": false
+    },
+    "weekly_drop_pc_id": {
+      "type": "string"
+    },
+    "weekly_drop_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hero_image_url": {
+      "type": "string"
+    },
+    "shop_banner_url": {
+      "type": "string"
+    },
+    "shop_banner_text": {
+      "type": "string"
+    },
+    "shop_banner_subtext": {
+      "type": "string"
+    },
+    "social_youtube": {
+      "type": "string"
+    },
+    "social_tiktok": {
+      "type": "string"
+    },
+    "social_instagram": {
+      "type": "string"
+    },
+    "social_x": {
+      "type": "string"
+    },
+    "admin_emails": {
+      "type": "string",
+      "description": "JSON array of admin email addresses"
+    },
+    "admin_phone_email": {
+      "type": "string",
+      "description": "Phone-to-email gateway address for SMS notifications (e.g. 1234567890@vtext.com for Verizon)"
+    },
+    "sms_notifications_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Send email-to-SMS notification when a new order is placed"
+    }
+  },
+  "required": [
+    "key"
+  ]
+}

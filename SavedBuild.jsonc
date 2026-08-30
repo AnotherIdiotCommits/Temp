@@ -1,0 +1,33 @@
+{
+  "name": "SavedBuild",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "User-given name for the build"
+    },
+    "base_pc": {
+      "type": "string",
+      "description": "Base PC model name"
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Full configuration with selected parts"
+    },
+    "total_price": {
+      "type": "number"
+    },
+    "color_theme": {
+      "type": "string",
+      "enum": [
+        "black",
+        "white"
+      ]
+    }
+  },
+  "required": [
+    "base_pc",
+    "configuration",
+    "total_price"
+  ]
+}

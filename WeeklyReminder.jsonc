@@ -1,0 +1,17 @@
+{
+  "name": "WeeklyReminder",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": []
+}
