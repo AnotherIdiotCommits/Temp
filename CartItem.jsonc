@@ -1,0 +1,23 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "pc_name": {
+      "type": "string"
+    },
+    "configuration": {
+      "type": "object"
+    },
+    "total_price": {
+      "type": "number"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "required": [
+    "pc_name",
+    "total_price"
+  ]
+}

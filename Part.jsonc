@@ -1,0 +1,133 @@
+{
+  "name": "Part",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Part name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "gpu",
+        "cpu",
+        "ram",
+        "storage",
+        "cooler",
+        "psu",
+        "motherboard",
+        "cables",
+        "cases"
+      ],
+      "description": "Part category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Customer price in USD"
+    },
+    "my_cost": {
+      "type": "number",
+      "description": "Admin cost price in USD"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string",
+      "enum": [
+        "neutral",
+        "white",
+        "black"
+      ],
+      "default": "neutral"
+    },
+    "platform": {
+      "type": "string",
+      "description": "AM4, AM5, Intel, or both"
+    },
+    "ram_type": {
+      "type": "string",
+      "description": "DDR4, DDR5, or both"
+    },
+    "form_factor": {
+      "type": "string",
+      "description": "mATX, ATX, or both"
+    },
+    "tdp": {
+      "type": "number",
+      "description": "TDP in watts (for CPU/GPU)"
+    },
+    "max_tdp": {
+      "type": "number",
+      "description": "Max TDP supported (for coolers)"
+    },
+    "min_psu": {
+      "type": "number",
+      "description": "Minimum PSU wattage required (for GPUs)"
+    },
+    "length_mm": {
+      "type": "number",
+      "description": "GPU length in mm"
+    },
+    "gpu_length_supported": {
+      "type": "number",
+      "description": "Max GPU length supported by this case (mm)"
+    },
+    "wattage": {
+      "type": "number",
+      "description": "PSU wattage"
+    },
+    "type": {
+      "type": "string",
+      "description": "Cooler type: air/aio/aio_lcd"
+    },
+    "min_cpu": {
+      "type": "string",
+      "description": "Minimum CPU recommended with this GPU"
+    },
+    "max_cpu": {
+      "type": "string",
+      "description": "Maximum CPU recommended with this GPU"
+    },
+    "recommended_cpus": {
+      "type": "string",
+      "description": "Comma-separated list of recommended CPUs for this GPU"
+    },
+    "excluded_cpus": {
+      "type": "string",
+      "description": "Comma-separated list of CPUs not recommended with this GPU"
+    },
+    "min_ram": {
+      "type": "string",
+      "description": "Minimum RAM (16GB/32GB/64GB)"
+    },
+    "max_ram": {
+      "type": "string",
+      "description": "Maximum RAM (16GB/32GB/64GB)"
+    },
+    "platform_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Compatibility tags"
+    },
+    "sort_order": {
+      "type": "number",
+      "default": 0
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "price"
+  ]
+}

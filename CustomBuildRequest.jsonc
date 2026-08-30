@@ -1,0 +1,71 @@
+{
+  "name": "CustomBuildRequest",
+  "type": "object",
+  "properties": {
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "budget_min": {
+      "type": "number"
+    },
+    "budget_max": {
+      "type": "number"
+    },
+    "color_preference": {
+      "type": "string",
+      "enum": [
+        "black",
+        "white",
+        "no_preference"
+      ]
+    },
+    "gpu_preference": {
+      "type": "string"
+    },
+    "cpu_preference": {
+      "type": "string"
+    },
+    "ram_amount": {
+      "type": "string"
+    },
+    "storage_amount": {
+      "type": "string"
+    },
+    "use_cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "game_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_build": {
+      "type": "object",
+      "description": "AI-generated recommendation"
+    },
+    "recommended_price": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "recommended",
+        "ordered",
+        "cancelled"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "budget_min",
+    "budget_max"
+  ]
+}

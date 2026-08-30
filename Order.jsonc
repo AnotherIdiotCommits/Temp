@@ -1,0 +1,61 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "order_number": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "pc_name": {
+      "type": "string"
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Full build configuration with parts"
+    },
+    "total_price": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "payment_received",
+        "parts_ordered",
+        "building",
+        "testing",
+        "ready_to_ship",
+        "shipped",
+        "delivered"
+      ],
+      "default": "payment_received"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "type": "object"
+    },
+    "tracking_number": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "is_custom_build": {
+      "type": "boolean",
+      "default": false
+    },
+    "queue_position": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "customer_email",
+    "total_price"
+  ]
+}
